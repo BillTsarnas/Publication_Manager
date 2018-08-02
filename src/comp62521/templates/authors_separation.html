@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+ <header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Separation</span>  degrees</h1>
+    </div>  
+      <nav>
+      <ul> <li class="current"><a href="/">Home</a><li> </ul>
+      </nav>
+   </div>
+ </header>
+
+<h1>{{ args.title }}</h1>
+
+First author: <input type="text" name="firstAuthor" list="author_name" id="name1">
+Second futhor: <input type="text" name="secondAuathor" list="author_name" maxlength="15" id="name2">
+    <datalist id="author_name">
+      {% for column in args.data[1] %}
+      <option value="{{ column[0] }}">
+      {% endfor %}
+    </datalist>
+    <button id="submit" type="button" value="submit" onclick="author_network()">submit</button>
+<br>
+<table border="1" width="80%">
+    <thead>
+     <tr id="header">
+         <th>Author 1</th>
+         <th>Author 2</th>
+         <th>Degree of separation</th>
+     </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<script
+ src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+function author_network() {
+   var name1 = document.getElementById('name1').value
+   var name2 = document.getElementById('name2').value
+   axios.get('/Separation',{
+ params:{
+   name1:name1,
+   name2:name2
+ }
+})
+.then(function(response){
+   $('#header').css('display','block');
+   $('#tbody').append('<tr><td>'+response.data[1][0]+'</td><td>'+response.data[1][1]+'</td><td>'+response.data[1][2]+'</td></tr>');
+})
+.catch(function(err){
+ console.log(err);
+});
+}
+
+</script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+
+ <header>
+   <div class="container">
+    <div id="branding">
+      {% set c = args.title.split() %}
+      {% if c | length == 2 %}
+        <h1><span class="highlight">{{ c[0] }}</span> {{ c[1] }}</h1>
+      {% else %}
+        <h1><span class="highlight">{{ c[0] }} {{ c[1] }}</span> {{ c[2] }}</h1>
+      {% endif %}
+    </div>
+    <nav>
+     <ul>
+ <li class="current"><a href="/">Home</a><li>
+     </ul>
+    </nav>
+   </div>
+ </header>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+    {% set cnt = 0 %}
+    {% for column in args.data[0] %}
+      <th><a href="/statisticsdetails/{{args.id}}?num_col={{cnt}}">{{ column }}</a></th>
+      {% set cnt = cnt + 1 %}
+    {% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+  {% for row in args.data[1] %}
+   <tr>
+    {% if args['author_click'] %}
+        <td><a href='/AuthorStatus{{args.name}}?author={{row[0]}}'>{{row[0]}}</a></td>
+    {% else %}
+        <td>{{row[0]}}</td>
+    {% endif %}
+    {% for data_item in row[1:] %}
+          <td align="center">{{ data_item }}</td>
+    {% endfor %}
+   </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

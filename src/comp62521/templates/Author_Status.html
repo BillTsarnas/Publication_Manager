@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+<header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Author Status: </span> {{args.author}}</h1>
+      </div>
+     <nav>
+     <ul>
+       <li class="current"><a href="/coauthors">Back</a><li> 
+       <li class="current"><a href="/">Home</a><li> 
+     </ul>
+    </nav>
+   </div>
+ </header>
+
+<div id="main" style="width: 100%;height:778px;"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.8.5/echarts.min.js"></script>
+<script type="text/javascript">
+        
+        var myChart = echarts.init(document.getElementById('main'));
+	var option = {
+    title: {
+        text: 'Chart of Co-author'
+    },
+    tooltip: {},
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    series : [
+        {
+            type: 'graph',
+            layout: 'force',
+            symbolSize: 100,
+            roam: true,
+            color: 'black',
+label: {
+    normal: {
+        show:true,
+        formatter:  function( data ) {
+            return '{red|\n' + data.name + '}';
+        },
+        rich: {
+            red: {
+                color: 'red'
+            }
+        }
+    }
+},
+            //edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [4, 10],
+            edgeLabel: {
+                normal: {
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            },
+            data: {{ args.data|safe }},
+            // links: [],
+            links: {{ args.links|safe }},
+            animation:true,
+            markArea:{
+                animation:false
+            },
+            markPoint:{
+                symbol: 'arrow',
+            },
+                        markLine:{
+                symbol: 'arrow',
+                precision:10
+            },
+               
+                        lineStyle: {
+                normal: {
+                    opacity: 0.9,
+                    width: 1.5,
+                    curveness: 0
+                }
+            },
+                            force: {
+                    repulsion:[0, 0.1],
+                    edgeLength: [0, 5],
+                    layoutAnimation:false,
+                    //initLayout:'circle',
+                    gravity:0
+                }
+        }
+    ]
+};
+        myChart.setOption(option);
+</script>
+{% endblock %}

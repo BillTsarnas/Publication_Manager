@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+ <header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Research</span> network</h1>
+    </div>  
+      <nav>
+      <ul> <li class="current"><a href="/">Home</a><li> </ul>
+      </nav>
+ </header>
+<h1>{{ args.title }}</h1>
+
+<form name="input" action="/chartcoauthor" method="get" data-ajax="false">
+Author Name: <input type="text" name="author" value="{{ args.name }}" required>
+
+<input type="submit" value="Submit">
+</form>
+
+{% if args.author != "" %}
+  {% if args.author_suggest %}
+    <h1>Results (in order of precedence)</h1>
+    <h2>Please choose a author:</h2>
+  {% endif %}
+{% endif %}
+
+<table>
+  <tbody>
+
+{% for data in args.data %}
+    <tr>   
+      {% if args.data %}
+        <td><a href="/Author_Status{{args.name}}?author={{data}}">{{ data }}</a></td>     
+      {% endif %}   
+    </tr>
+  {% endfor %}
+
+
+{% for row in args.data[1] %}
+    <tr>
+    {% for data_item in row %}
+      {% if args.data %}
+        <td><a href="/Author_Status{{args.name}}?author={{data_item}}">{{ data_item }}</a></td>
+      {% else %}
+        <td>{{ data_item }}</td>
+      {% endif %}
+    {% endfor %}
+    </tr>
+  {% endfor %}
+
+
+</tbody>
+</table>
+
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="/static/js/sorttable.js"></script>
+
+<script>
+function validateForm(form){
+  Author = form["author"].value;
+  if (Author == '' ){
+    alert("Please enter author name!");
+    return false;
+  }
+  return true;
+
+}
+</script>
+{% endblock %}

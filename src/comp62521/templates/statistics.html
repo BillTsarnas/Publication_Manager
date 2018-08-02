@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  <style> .mySlides {display:none;} </style>
+{% endblock %}
+
+{% block content %}
+ <header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Computer</span>  science publication information</h1>
+    </div>
+    <nav>
+     <ul>
+      <li class="current"><a href="/">Home</a><li>
+     </ul>
+    </nav>
+   </div>
+ </header>
+ 
+<!-----------------End header--------------------------------->
+
+<section id="showcase">  
+ <!--<h1>Computer science publication stats </h1>
+ <p>This a perfect website where you can find the information of author and co-author</p>-->
+ <div class="container">
+  <img class="mySlides" src="{{ url_for('static', filename='img/pic4.jpg')}}" height="600px" width="100%">
+  <img class="mySlides" src="{{ url_for('static', filename='img/pic2.jpg')}}" height="600px" width="100%">
+  <img class="mySlides" src="{{ url_for('static', filename='img/pic3.jpg')}}" height="600px" width="100%">
+ </div>
+
+<script>
+//-----------------carousel stuff-------------------------------
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+//---------------------publication button-------------------
+function pub_box_listener(option) {
+
+    x = document.getElementsByClassName("box")
+    if (option == 'sel'){
+        x[0].style.display = "none"
+        x[1].style.display = "block"
+    }
+    else if(option == 'icon'){
+        x[0].style.display = "block"
+        x[1].style.display = "none"
+    }
+}
+
+//change to publication summary/author/year pages
+function link(url){
+    //window.history.pushState('page2', 'Title', 'http://0.0.0.0:9292'+url);
+    location.href = 'http://0.0.0.0:9292'+url;
+}
+
+</script>
+ </section>
+
+<!---------------------End script------------------- -->
+
+
+ <section id="newsletter">
+   <div class="container">
+   </br>
+     <h1>Search statistics of author by typing author's name </h1>
+     <table>
+     <tr>
+     </br>
+     <td>  <form name="input" action="/searchfunction" method="get" data-ajax="false"> </td>
+    <td> <input type="text" placeholder="search(e.g sam)" name="author" value="{{ args.name }}" width="48" height="48" border="1px solid #ccc" required>  </td>
+       <td> <input type="image" alt="Submit" src="{{ url_for('static', filename='img/iconS.png')}}" height="30px" width="30px"> </form> </td>
+    </tr>
+      </table
+     </form>
+   </div>
+ </section>
+ 
+ 
+ <!---------------Search end --------------->
+
+ <section id="boxes">
+   <div class="container">
+     <div class="box" id="pub2">
+       <img src="{{ url_for('static', filename='img/Pub.png')}}" onclick="pub_box_listener('sel')" style="cursor: pointer;">
+
+              
+       <h3>Publication</h3>
+       <p>Selecting relevant categories to get more detials about publication</p>
+     </div>
+     
+     <div class="box" id="pub2" style="display: none;">
+       <p>Please select publication type</p>
+       <button class="button_2" onclick="link('/statisticsdetails/publication_summary')">Publication Summary</button>
+       <button class="button_2" onclick="link('/statisticsdetails/publication_author')">Publication by Author</button>
+       <button class="button_2" onclick="link('/statisticsdetails/publication_year')">Publication by Year</button>
+       <button class="button_2" onclick="link('/statisticsdetails/author_year')">Author by Year</button>
+       <h3 id="back" onclick="pub_box_listener('icon')">Hide selections</h3>
+     </div>
+       
+     <div class="box">
+      <a href="/averages"> <img src="{{ url_for('static', filename='img/Average.png')}}"> </a>
+       <h3>Average</h3>
+       <p>Get Average data details from four tables</p>
+     </div>
+
+     <div class="box">
+       <a href="/coauthors"><img src="{{ url_for('static', filename='img/Co-Aut.png')}}"></a>
+       <h3>Co-Authors</h3>
+       <p>Get the the name of all co-authors</p>
+     </div>
+
+     <div class="box">
+      <a href="/firstlastsole"> <img src="{{ url_for('static', filename='img/Sole.png')}}"> </a>
+       <h3>First-Last-Sole</h3>
+       <p>Find the number of first, last and sole author according to different publication types</p>
+     </div>
+
+     <div class="box">
+       <a href="/authors_separation_page"> <img src="{{ url_for('static', filename='img/se.png')}}"> </a>
+       <h3>Degrees Of Separation</h3>
+       <p>Calculate the degrees of separation between two authors</p>
+     </div>
+
+    <div class="box">
+       <a href="/chartcoauthor"> <img src="{{ url_for('static', filename='img/Graph.png')}}"> </a>
+       <h3>Research Network</h3>
+       <p>Visualize the reseach network of a given author</p>
+     </div>
+
+   </div>
+ </section>
+ <!--<li><a href="/authors_separation_page">Search Authors' Separation</a></li>-->
+
+ </section>
+
+{% endblock %}
+</body>
+</html>

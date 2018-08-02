@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+<header>
+   <div class="container">
+    <div id="branding">
+      {% set c = args.title.split() %}
+      <h1><span class="highlight">{{ c[0] }} {{ c[1] }}</span> {{ ' '.join(c[2:]) }}</h1>
+    </div>
+    <nav>
+     <ul>
+ <li class="current"><a href="/statisticsdetails/publication_author">Back</a><li>
+ <li class="current"><a href="/">Home</a><li>
+     </ul>
+    </nav>
+   </div>
+ </header>
+
+<table border="1" width="80%">
+  <thead>
+    <tr>
+    {% for column in args.data[0] %}
+      <th>{{ column }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+  {% for row in args.data[1] %}
+    <tr>
+    {% for data_item in row %}
+      <td align="center" >{{ data_item}}</td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+

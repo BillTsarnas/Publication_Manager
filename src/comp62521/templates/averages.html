@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+ <header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Average</span> data</h1>
+    </div>  
+      <nav>
+      <ul> <li class="current"><a href="/">Home</a><li> </ul>
+      </nav>
+ </header>
+ <div class="container">
+{% for table in args.tables %}
+<h2 class="highlight">{{ table.title }}</h2>
+
+<table border="1" width="80%">
+  <thead>
+    <tr>
+      {% for column in table.header %}
+        <th>{{ column }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in table.rows %}    
+      <tr>
+        {% for data_item in row %}
+          <td align="center" >{{ data_item }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endfor %}
+</div>
+{% endblock %}

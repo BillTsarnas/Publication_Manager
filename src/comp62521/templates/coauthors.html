@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+ <header>
+   <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Co-</span>Authors</h1>
+      </div>
+     <nav>
+     <ul> <li class="current"><a href="/">Home</a><li> </ul>
+    </nav>
+   </div>
+ </header>
+ <br/>
+ <br/>
+<div class="container">
+<form name="input" action="/coauthors" method="get" data-ajax="false" onSubmit="validateForm(this)">
+Start year: <input type="number" name="start_year" min="{{ args.min_year }}" max="{{ args.max_year }}" value="{{ args.start_year }}">
+End year: <input type="number" name="end_year" min="{{ args.min_year }}" max="{{ args.max_year }}" value="{{ args.end_year }}">
+Publication type:
+
+
+<select name="pub_type">
+  <option value="4"> <h2> All Publications </h2> </option>
+  <option value="0"{% if args.pub_type == 0 %} selected="selected"{% endif %}>Conference Paper</option>
+  <option value="1"{% if args.pub_type == 1 %} selected="selected"{% endif %}>Journal</option>
+  <option value="2"{% if args.pub_type == 2 %} selected="selected"{% endif %}>Book</option>
+  <option value="3"{% if args.pub_type == 3 %} selected="selected"{% endif %}>Book Chapter</option>
+</select>
+
+<input type="submit" value="Submit">
+</form>
+
+<h1>{{ args.pub_str }} in {{ args.start_year }} {% if args.start_year != args.end_year %} - {{ args.end_year }}{% endif %}</h1>
+
+<table>
+  <thead>
+    <tr>
+    {% set cnt = 0 %}
+    {% for column in args.data[0] %}
+      <th><a href="/coauthors?num_col={{cnt}}">{{ column }}</a></th>
+      {% set cnt = cnt + 1 %}
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in args.data[1] %}
+    <tr>
+    <td><a class="coauth" onclick="link('{{ row[0] }}')">{{ row[0] }}</a></td>
+    {% for data_item in row[1:] %}
+      <td>{{ data_item }}</td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+    {% for column in args.data[0] %}
+      <th>{{ column }}</th>
+    {% endfor %}
+    </tr>
+  </tfoot>
+</table>
+
+<script>
+function validateForm(form){
+  start_year = form["start_year"].value;
+  end_year = form["end_year"].value;
+  if (end_year < start_year){
+    alert("Invalid date range");
+    return false;
+  }
+  return true;
+}
+
+function link(inp){
+  author = inp.split("(")[0];
+  location.href = "/Author_Status{{args.name}}?author=" + author;
+}
+</script>
+</div>
+{% endblock %}

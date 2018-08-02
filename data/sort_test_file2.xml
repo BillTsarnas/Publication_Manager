@@ -1,0 +1,32 @@
+<dblp>
+<inproceedings mdate="2013-01-14" key="conf/eScience/WolstencroftOGNK012">
+    <author>Katherine Wolstencroft</author>
+    <author>Stuart Owen</author>
+    <author>Carole A. Goble</author>
+    <author>Quyen Nguyen</author>
+    <author>Olga Krebs</author>
+    <author>Wolfgang Mller 0001</author>
+    <title>RightField: Semantic enrichment of Systems Biology data using spreadsheets.</title>
+    <pages>1-8</pages>
+    <year>2012</year>
+    <booktitle>eScience</booktitle>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404412</ee>
+    <crossref>conf/eScience/2012</crossref>
+    <url>db/conf/eScience/eScience2012.html#WolstencroftOGNK012</url>
+</inproceedings>
+<inproceedings mdate="2011-06-28" key="conf/er/GriffithsFPMHW01">
+    <author>Tony Griffiths</author>
+    <author>Alvaro A. A. Fernandes</author>
+    <author>Norman W. Paton</author>
+    <author>Keith T. Mason</author>
+    <author>Bo Huang 0001</author>
+    <author>Michael F. Worboys</author>
+    <title>Tripod: A Comprehensive Model for Spatial and Aspatial Historical Objects.</title>
+    <pages>84-102</pages>
+    <year>2001</year>
+    <crossref>conf/er/2001</crossref>
+    <booktitle>ER</booktitle>
+    <ee>http://dx.doi.org/10.1007/3-540-45581-7_9</ee>
+    <url>db/conf/er/er2001.html#GriffithsFPMHW01</url>
+</inproceedings>
+</dblp>

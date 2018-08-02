@@ -1,0 +1,254 @@
+<dblp>
+<book mdate="2002-01-03" key="books/aw/CeriF97">
+    <author>Stefano Ceri</author>
+    <author>Piero Fraternali</author>
+    <title>Designing Database Applications with Objects and Rules: The IDEA Methodology</title>
+    <publisher href="db/publishers/aw.html">Addison-Wesley</publisher>
+    <year>1997</year>
+    <isbn>0-201-40369-2</isbn>
+</book>
+<book mdate="2002-01-03" key="books/bc/BatiniCN92">
+    <author>Carlo Batini</author>
+    <author>Stefano Ceri</author>
+    <author>Shamkant B. Navathe</author>
+    <title>Conceptual Database Design: An Entity-Relationship Approach.</title>
+    <publisher>Benjamin/Cummings</publisher>
+    <year>1992</year>
+    <isbn>0-8053-0244-1</isbn>
+</book>
+<book mdate="2002-01-03" key="books/mg/AtzeniCPT99">
+    <author>Paolo Atzeni</author>
+    <author>Stefano Ceri</author>
+    <author>Stefano Paraboschi</author>
+    <author>Riccardo Torlone</author>
+    <title>Database Systems - Concepts, Languages and Architectures</title>
+    <publisher>McGraw-Hill Book Company</publisher>
+    <year>1999</year>
+    <isbn>0-07-709500-6</isbn>
+    <url>http://www.mcgraw-hill.co.uk/atzeni/</url>
+</book>
+<book mdate="2002-01-03" key="books/mg/CeriP84">
+    <author>Stefano Ceri</author>
+    <author>Giuseppe Pelagatti</author>
+    <title>Distributed Databases: Principles and Systems</title>
+    <publisher>McGraw-Hill Book Company</publisher>
+    <year>1984</year>
+    <isbn>0-07-010829-3</isbn>
+</book>
+<incollection mdate="2008-02-24" key="books/crc/tucker97/CeriR97">
+    <author>Stefano Ceri</author>
+    <author>Raghu Ramakrishnan</author>
+    <title>Rules in Data-Based Systems.</title>
+    <pages>1142-1157</pages>
+    <year>1997</year>
+    <crossref>books/crc/tucker1997</crossref>
+    <booktitle>The Computer Science and Engineering Handbook</booktitle>
+    <url>db/books/collections/tucker97.html#CeriR97</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/el/alba85/CeriP85">
+    <author>Stefano Ceri</author>
+    <author>Barbara Pernici</author>
+    <title>DATAID-D: Methodology for Distributed Database Design.</title>
+    <pages>157-183</pages>
+    <year>1985</year>
+    <booktitle>Computer-Aided Database Design: the DATAID approach</booktitle>
+    <url>db/books/collections/dataid85.html#CeriP85</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/el/ceri83/BracchiCP83">
+    <author>Giampio Bracchi</author>
+    <author>Stefano Ceri</author>
+    <author>Giuseppe Pelagatti</author>
+    <title>A Set of Integrated Tools for the Conceptual Design of Database Schemas and Transactions.</title>
+    <pages>181-204</pages>
+    <year>1983</year>
+    <booktitle>Methodology and Tools for Data Base Design</booktitle>
+    <url>db/books/collections/Ceri83.html#BracchiCP83</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/el/ceri83/Ceri83">
+    <author>Stefano Ceri</author>
+    <title>Methodology and Tools for Data Base Design in the DATAID Project.</title>
+    <pages>1-8</pages>
+    <year>1983</year>
+    <booktitle>Methodology and Tools for Data Base Design</booktitle>
+    <url>db/books/collections/Ceri83.html#Ceri83</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/mk/widomC96/WidomC96">
+    <author>Jennifer Widom</author>
+    <author>Stefano Ceri</author>
+    <title>Introduction to Active Database Systems</title>
+    <booktitle>Active Database Systems: Triggers and Rules For Advanced Database Processing</booktitle>
+    <publisher href="db/publishers/mkp.html">Morgan Kaufmann</publisher>
+    <year>1996</year>
+    <pages>1-41</pages>
+    <url>db/books/collections/widom96.html#WidomC96</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/mk/widomC96/WidomC96a">
+    <author>Jennifer Widom</author>
+    <author>Stefano Ceri</author>
+    <title>Standards and Commercial Systems</title>
+    <booktitle>Active Database Systems: Triggers and Rules For Advanced Database Processing</booktitle>
+    <publisher href="db/publishers/mkp.html">Morgan Kaufmann</publisher>
+    <year>1996</year>
+    <pages>233-258</pages>
+    <url>db/books/collections/widom96.html#WidomC96a</url>
+</incollection>
+<inproceedings mdate="2011-06-14" key="conf/adb/BaralisCMP94">
+    <author>Elena Baralis</author>
+    <author>Stefano Ceri</author>
+    <author>Gabriella Monteleone</author>
+    <author>Stefano Paraboschi</author>
+    <title>An Intelligent Database System Application: The Design of EMS.</title>
+    <pages>172-189</pages>
+    <year>1994</year>
+    <booktitle>ADB</booktitle>
+    <url>db/conf/adb/adb94.html#BaralisCMP94</url>
+    <ee>http://dx.doi.org/10.1007/3-540-58183-9_48</ee>
+</inproceedings>
+<inproceedings mdate="2004-05-07" key="conf/bda/Ceri90">
+    <author>Stefano Ceri</author>
+    <title>Object orientation and logic programming for databases: a season's flirt or long-term marriage?</title>
+    <pages>295-</pages>
+    <year>1990</year>
+    <crossref>conf/bda/1990</crossref>
+    <booktitle>BDA</booktitle>
+    <url>db/conf/bda/bda1990.html#Ceri90</url>
+</inproceedings>
+<inproceedings mdate="2002-01-03" key="conf/bda/Ceri99">
+    <author>Stefano Ceri</author>
+    <title>Model and Tools for Design of Data-Intensive Web Applications.</title>
+    <pages>1</pages>
+    <year>1999</year>
+    <booktitle>Proc. 15mes Journes Bases de Donnes Avances, BDA</booktitle>
+    <url>db/conf/bda/bda99.html#Ceri99</url>
+</inproceedings>
+<inproceedings mdate="2002-01-03" key="conf/berkeley/CeriO82">
+    <author>Stefano Ceri</author>
+    <author>Susan S. Owicki</author>
+    <title>On the Use of Optimistic Methods for Concurrency Control in Distributed Databases.</title>
+    <pages>117-129</pages>
+    <year>1982</year>
+    <booktitle>Berkeley Workshop</booktitle>
+    <url>db/conf/berkeley/berkeley82.html#CeriO82</url>
+</inproceedings>
+<inproceedings mdate="2013-02-19" key="conf/caise/CacaceCCGLLTZ89">
+    <author>Filippo Cacace</author>
+    <author>Stefano Ceri</author>
+    <author>Stefano Crespi-Reghizzi</author>
+    <author>Georg Gottlob</author>
+    <author>Gianfranco Lamperti</author>
+    <author>Luigi Lavazza</author>
+    <author>Letizia Tanca</author>
+    <author>Roberto V. Zicari</author>
+    <title>ALGRES: An Extended Relational Database System for the Specification and Prototyping of Complex Applications.</title>
+    <year>1989</year>
+    <booktitle>CA(i)SE</booktitle>
+    <ee>http://ceur-ws.org/Vol-961/paper41.pdf</ee>
+    <crossref>conf/caise/1989</crossref>
+    <url>db/conf/caise/caise89.html#CacaceCCGLLTZ89</url>
+</inproceedings>
+<inproceedings mdate="2009-10-09" key="conf/caise/Ceri97">
+    <author>Stefano Ceri</author>
+    <author>Piero Fraternali</author>
+    <title>The Story of the IDEA Methodology.</title>
+    <pages>1-17</pages>
+    <year>1997</year>
+    <crossref>conf/caise/1997</crossref>
+    <booktitle>CAiSE</booktitle>
+    <url>db/conf/caise/caise97.html#Ceri97</url>
+    <ee>http://dx.doi.org/10.1007/3-540-63107-0_1</ee>
+</inproceedings>
+<inproceedings mdate="2011-07-06" key="conf/edbt/BragaCC04">
+    <author>Daniele Braga</author>
+    <author>Alessandro Campi</author>
+    <author>Stefano Ceri</author>
+    <title>XQBE: A Graphical Interface for XQuery Engines.</title>
+    <pages>848-850</pages>
+    <ee>http://dx.doi.org/10.1007/978-3-540-24741-8_55</ee>
+    <year>2004</year>
+    <crossref>conf/edbt/2004</crossref>
+    <booktitle>EDBT</booktitle>
+    <url>db/conf/edbt/edbt2004.html#BragaCC04</url>
+</inproceedings>
+<article mdate="2011-06-07" key="journals/cacm/CeriG86">
+    <author>Stefano Ceri</author>
+    <author>Georg Gottlob</author>
+    <title>Normalization of Relations and PROLOG.</title>
+    <pages>524-544</pages>
+    <year>1986</year>
+    <volume>29</volume>
+    <journal>Commun. ACM</journal>
+    <number>6</number>
+    <url>db/journals/cacm/cacm29.html#CeriG86</url>
+    <ee>http://doi.acm.org/10.1145/5948.5952</ee>
+    <cdrom>CACMs1/CACM29/P0524.pdf</cdrom>
+</article>
+<article mdate="2007-06-05" key="journals/cacm/CeriMRD07">
+    <author>Stefano Ceri</author>
+    <author>Maristella Matera</author>
+    <author>Francesca Rizzo</author>
+    <author>Vera Demald</author>
+    <title>Designing data-intensive web applications for content accessibility using web marts.</title>
+    <pages>55-61</pages>
+    <year>2007</year>
+    <volume>50</volume>
+    <journal>Commun. ACM</journal>
+    <number>4</number>
+    <ee>http://doi.acm.org/10.1145/1232743.1232748</ee>
+    <url>db/journals/cacm/cacm50.html#CeriMRD07</url>
+</article>
+<article mdate="2011-06-07" key="journals/cacm/WiederholdWC92">
+    <author>Gio Wiederhold</author>
+    <author>Peter Wegner</author>
+    <author>Stefano Ceri</author>
+    <title>Toward Megaprogramming.</title>
+    <pages>89-99</pages>
+    <year>1992</year>
+    <volume>35</volume>
+    <journal>Commun. ACM</journal>
+    <number>11</number>
+    <url>db/journals/cacm/cacm35.html#WiederholdWC92</url>
+    <ee>http://doi.acm.org/10.1145/138844.138853</ee>
+</article>
+<article mdate="2003-03-17" key="journals/cn/BonifatiCP02">
+    <author>Angela Bonifati</author>
+    <author>Stefano Ceri</author>
+    <author>Stefano Paraboschi</author>
+    <title>Pushing reactive services to XML repositories using active rules.</title>
+    <pages>645-660</pages>
+    <year>2002</year>
+    <volume>39</volume>
+    <journal>Computer Networks</journal>
+    <number>5</number>
+    <url>db/journals/cn/cn39.html#BonifatiCP02</url>
+    <ee>http://dx.doi.org/10.1016/S1389-1286(02)00226-8</ee>
+</article>
+<article mdate="2012-10-10" key="journals/corr/cs-DB-9912015" publtype="informal publication">
+    <author>Angela Bonifati</author>
+    <author>Stefano Ceri</author>
+    <title>Comparative Analysis of Five XML Query Languages</title>
+    <ee>http://arxiv.org/abs/cs.DB/9912015</ee>
+    <year>1999</year>
+    <journal>CoRR</journal>
+    <volume>cs.DB/9912015</volume>
+    <url>db/journals/corr/corr9912.html#cs-DB-9912015</url>
+</article>
+<article mdate="2011-12-05" key="journals/csur/CeriR96">
+    <author>Stefano Ceri</author>
+    <author>Raghu Ramakrishnan</author>
+    <title>Rules in Database Systems.</title>
+    <pages>109-111</pages>
+    <year>1996</year>
+    <volume>28</volume>
+    <journal>ACM Comput. Surv.</journal>
+    <number>1</number>
+    <url>db/journals/csur/csur28.html#CeriR96</url>
+    <cdrom>CSURs1/csur28/P109.pdf</cdrom>
+    <ee>http://doi.acm.org/10.1145/234313.234362</ee>
+    <cite label="Baralis et al. 1996">journals/tods/BaralisCP96</cite>
+    <cite label="Bry et al. 1988">conf/edbt/BryDM88</cite>
+    <cite label="Ceri et al. 1994">journals/tods/CeriFPT94</cite>
+    <cite label="Friesen et al. 1994">conf/deductive/FriesenGLV93</cite>
+    <cite label="Ramakrishnan 1994">conf/deductive/93b</cite>
+    <cite label="Widom and Ceri 1996">books/mk/WidomC96</cite>
+</article>
+</dblp>
